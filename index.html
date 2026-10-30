@@ -1,0 +1,127 @@
+<title>headempty.tools Sticker Sheet 2000</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fredoka:wght@400;500;600&family=Silkscreen:wght@400;700&display=swap">
+<style>
+/* Layout: a sticker-covered Trapper Keeper page. Banner and marquee on top, big die-cut stickers in the middle, web-1.0 furniture (counter, badges, guestbook) at the bottom. Motion runs at ~8fps via steps() for a stop-motion feel. */
+:root{--cream:#fff3d6;--paper:#fffaf0;--ink:#2a2150;--pink:#ff6fb5;--sky:#4cc9f0;--lime:#a6e35a;--sun:#ffcf33;--grape:#9b6dff;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:500 17px/1.4 Fredoka,"Trebuchet MS",sans-serif;background-color:var(--cream);
+ background-image:
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .16  0 0 0 0 .13  0 0 0 0 .31  0 0 0 .13 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+  radial-gradient(var(--sun) 2px,transparent 2.5px),
+  repeating-linear-gradient(0deg,transparent 0 31px,rgba(76,201,240,.22) 31px 32px);
+ background-size:180px 180px,28px 28px,100% 32px;
+ padding-bottom:56px;overflow-x:hidden}
+.in{max-width:1000px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
+/* marquee */
+.mq{background:var(--ink);color:var(--sun);font:700 14px Silkscreen,monospace;overflow:hidden;white-space:nowrap;border-bottom:4px solid var(--pink);padding:7px 0}
+.mq div{display:inline-block;padding-left:100%;animation:mq 30s steps(240) infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+/* header */
+header{padding-top:26px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end}
+h1{font:400 clamp(2.5rem,10.5vw,5.6rem)/1 "Bagel Fat One",sans-serif;margin:0;overflow-wrap:anywhere}
+h1 .c{display:inline-block;text-shadow:3px 3px 0 var(--pink),5px 5px 0 var(--ink);animation:jig .9s steps(1) infinite;animation-delay:calc(var(--i)*-.13s)}
+h1 .c.d{color:var(--pink);text-shadow:3px 3px 0 var(--ink)}
+@keyframes jig{0%{transform:translateY(0) rotate(-2deg)}25%{transform:translateY(-6px) rotate(2deg)}50%{transform:translateY(1px) rotate(-1deg)}75%{transform:translateY(-4px) rotate(3deg)}}
+.under{display:inline-block;background:repeating-linear-gradient(-45deg,var(--sun) 0 12px,var(--ink) 12px 24px);padding:4px;border:3px solid var(--ink);transform:rotate(3deg)}
+.under span{display:block;background:var(--paper);font:700 13px Silkscreen,monospace;padding:4px 10px}
+.lede{margin:6px 0 0;font-size:1.2rem;font-weight:600;max-width:46ch;background:var(--paper);border:3px solid var(--ink);border-radius:14px;padding:8px 16px;box-shadow:4px 4px 0 var(--ink)}
+/* sticker field */
+.field{position:relative;display:flex;flex-wrap:wrap;gap:36px 30px;justify-content:center;padding:54px 0 30px}
+.sk{position:relative;width:min(100%,300px);aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:30px 26px;text-align:center;color:inherit;text-decoration:none;background:var(--c);border:7px solid #fff;border-radius:var(--r);box-shadow:0 0 0 3px var(--ink),7px 9px 0 3px var(--ink);transform:rotate(var(--t));transition:transform .18s steps(3)}
+.sk:nth-of-type(1){--c:var(--sky);--t:-5deg;--r:47% 53% 50% 50%}
+.sk:nth-of-type(2){--c:var(--lime);--t:4deg;--r:50% 50% 46% 54%}
+.sk::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.5;mix-blend-mode:soft-light;background:linear-gradient(115deg,transparent 30%,#fff 38%,#ffd1f0 44%,#c8fbff 50%,transparent 58%);background-size:260% 100%;animation:holo 3.2s steps(10) infinite}
+@keyframes holo{from{background-position:130% 0}to{background-position:-30% 0}}
+.sk::after{content:"";position:absolute;right:-6px;bottom:-6px;width:56px;height:56px;border-radius:0 0 50% 0;background:linear-gradient(135deg,transparent 50%,#e9e2c9 50%,#fff 100%);box-shadow:-3px -3px 0 rgba(42,33,80,.18);opacity:0;transition:opacity .1s steps(1)}
+.sk:hover,.sk:focus-visible{transform:rotate(0) scale(1.05) translateY(-6px);animation:wob .5s steps(1) infinite}
+.sk:hover::after{opacity:1}
+.sk:focus-visible{outline:5px solid var(--grape);outline-offset:8px}
+@keyframes wob{0%{rotate:0deg}33%{rotate:-2deg}66%{rotate:2deg}}
+.sk svg{width:170px;height:100px;color:var(--ink);flex:none}
+.nm{font:400 2rem/1 "Bagel Fat One"}
+.ds{font-size:1rem;max-width:22ch}
+.go{background:var(--pink);border:3px solid var(--ink);border-radius:999px;padding:2px 20px 3px;font:400 1.15rem "Bagel Fat One";box-shadow:0 4px 0 var(--ink);margin-top:4px}
+.sk:hover .go{background:var(--sun)}
+.new{position:absolute;top:-22px;left:-18px;width:88px;height:88px;animation:spin 3s steps(12) infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.new svg{width:100%;height:100%;position:absolute;inset:0}.new b{position:absolute;inset:0;display:grid;place-items:center;font:400 .95rem/1 "Bagel Fat One";color:var(--ink);text-align:center}
+.nb{position:absolute;top:-22px;left:-18px;width:88px;height:88px}
+.nb b{animation:none}
+.ph{width:min(100%,220px);aspect-ratio:1;border:4px dashed var(--ink);border-radius:50%;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:600;transform:rotate(-8deg);align-self:center;gap:2px}
+.ph b{font:400 3rem/1 "Bagel Fat One";color:var(--pink);animation:blink 1.2s steps(1) infinite}
+@keyframes blink{50%{opacity:.25}}
+/* floating loose stickers */
+.loose{position:absolute;font:400 1.1rem/1 "Bagel Fat One";border:4px solid #fff;box-shadow:0 0 0 2px var(--ink),4px 5px 0 2px var(--ink);padding:8px 14px;animation:flt 1.6s steps(1) infinite;pointer-events:none}
+@keyframes flt{0%{transform:translateY(0) rotate(var(--t))}50%{transform:translateY(-6px) rotate(calc(var(--t) + 3deg))}}
+/* y2k furniture */
+.fur{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;margin-top:10px}
+.win{background:#d9d4e8;border:3px solid var(--ink);border-radius:10px;box-shadow:5px 5px 0 var(--ink);overflow:hidden}
+.tb{background:linear-gradient(90deg,var(--grape),var(--sky));color:#fff;font:700 13px Silkscreen,monospace;padding:5px 8px;display:flex;justify-content:space-between}
+.bd{padding:12px;background:var(--paper);font-size:15px}
+.ctr{display:flex;gap:3px;margin-top:6px}.ctr i{font:700 20px Silkscreen,monospace;font-style:normal;background:var(--ink);color:var(--lime);padding:2px 7px;border-radius:3px}
+.bar{height:18px;border:3px solid var(--ink);background:#fff;margin:8px 0 4px;position:relative;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--pink);animation:dl 5s steps(12) infinite}
+@keyframes dl{to{width:100%}}
+.bg{display:flex;flex-wrap:wrap;gap:8px}
+.b88{width:88px;height:31px;border:2px solid var(--ink);font:700 10px/1.1 Silkscreen,monospace;display:grid;place-items:center;text-align:center;background:var(--c);color:var(--ink)}
+.gb{display:flex;flex-direction:column;gap:6px}
+.gb p{margin:0;background:#fff;border:2px solid var(--ink);padding:4px 8px;font-size:14px}
+.gb .bt{align-self:flex-start;font:700 12px Silkscreen,monospace;background:var(--sun);border:2px solid var(--ink);padding:3px 10px;box-shadow:2px 2px 0 var(--ink)}
+.cur{position:fixed;left:0;top:0;pointer-events:none;z-index:50;font-size:18px;color:var(--pink);animation:fall .7s steps(7) forwards}
+@keyframes fall{to{opacity:0;transform:translate(var(--dx),40px) rotate(180deg)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.mq div{padding-left:0}.bar i{width:70%}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="c" viewBox="0 0 100 60"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M50 4 82 20v22L50 56 18 42V20z" fill="#fffaf0"/><path d="M18 20l32 16 32-16M50 36v20"/><path d="M26 12c8 6 8 14 22 22" stroke="#ff6fb5" stroke-dasharray="2 6"/></g></symbol>
+<symbol id="s" viewBox="0 0 100 60"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="4" width="76" height="52" rx="6" fill="#fffaf0"/><path d="M20 20h60M20 32h60M20 44h60" opacity=".3"/><path d="M22 40c5-22 10-22 10-6s6 6 11-4 7-3 11 2 9-6 13-6" stroke="#ff6fb5" stroke-width="5"/></g></symbol>
+<symbol id="burst" viewBox="0 0 100 100"><polygon points="50,2 61,22 83,13 79,37 99,45 80,59 91,80 68,78 62,98 50,82 38,98 32,78 9,80 20,59 1,45 21,37 17,13 39,22" fill="#ffcf33" stroke="#2a2150" stroke-width="4" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="mq" aria-hidden="true"><div>&#9733; welcome to headempty.tools &#9733; best viewed at 800x600 in any browser &#9733; you are visitor number 000002 &#9733; no brain required &#9733; new tools added whenever my head empties again &#9733; sign the guestbook &#9733;</div></div>
+
+<div class="in">
+<header>
+  <h1 id="w" aria-label="headempty.tools">headempty.tools</h1>
+  <div class="under" aria-hidden="true"><span>UNDER CONSTRUCTION</span></div>
+  <p class="lede">A sheet of stickers for my little tools. Peel one to open it. Blank spots are for the next batch.</p>
+</header>
+
+<main class="field">
+  <div class="loose" aria-hidden="true" style="--t:-8deg;left:2%;top:6px;background:var(--pink)">no brain</div>
+  <div class="loose" aria-hidden="true" style="--t:6deg;right:3%;top:0;background:var(--sun);animation-delay:-.5s">100% real</div>
+  <a class="sk" href="https://claude.ai/artifact/Rwusv1yW8EBLyZZhCnwgzu" target="_blank" rel="noopener">
+    <span class="nb" aria-hidden="true"><span class="new"><svg><use href="#burst"/></svg></span><b>NEW!</b></span>
+    <svg><use href="#c"/></svg><span class="nm">Sketch3D</span><span class="ds">Sketch and sculpt in 3D right in the browser.</span><span class="go">Peel it</span></a>
+  <a class="sk" href="https://claude.ai/artifact/SZxkXR3M8QW6RMk7e3L6j4" target="_blank" rel="noopener">
+    <svg><use href="#s"/></svg><span class="nm">Handwriting Sheets</span><span class="ds">Make handwriting practice and worksheet pages.</span><span class="go">Peel it</span></a>
+  <div class="ph"><b>+</b>next sticker<br>goes here</div>
+</main>
+
+<section class="fur" aria-label="Page extras">
+  <div class="win"><div class="tb"><span>visitor.exe</span><span>x</span></div><div class="bd">You are visitor number<div class="ctr" aria-label="2"><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>2</i></div></div></div>
+  <div class="win"><div class="tb"><span>loading.exe</span><span>x</span></div><div class="bd">Loading more tools...<div class="bar"><i></i></div>Estimated time: whenever</div></div>
+  <div class="win"><div class="tb"><span>guestbook.txt</span><span>x</span></div><div class="bd gb"><p><b>anon:</b> cool site lol</p><p><b>you:</b> ...</p><span class="bt">Sign it</span></div></div>
+</section>
+<div class="bg" style="margin-top:22px" aria-hidden="true">
+  <span class="b88" style="--c:var(--sky)">MADE BY HAND</span><span class="b88" style="--c:var(--lime)">NO BRAIN INSIDE</span><span class="b88" style="--c:var(--pink)">WEBRING SOON</span><span class="b88" style="--c:var(--sun)">800x600</span>
+</div>
+</div>
+
+<script>
+(function(){
+  var w=document.getElementById("w"),t=w.textContent,o="";
+  for(var i=0;i<t.length;i++){var ch=t.charAt(i);o+='<span class="c'+(ch==="."?" d":"")+'" aria-hidden="true" style="--i:'+i+'">'+ch+"</span>"}
+  w.innerHTML=o;
+  var fine=matchMedia("(pointer:fine)").matches,calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if(!fine||calm)return;
+  var last=0,cols=["#ff6fb5","#4cc9f0","#ffcf33","#9b6dff"];
+  document.addEventListener("pointermove",function(e){
+    var n=Date.now();if(n-last<90)return;last=n;
+    var s=document.createElement("span");s.className="cur";s.textContent="★";
+    s.style.left=e.clientX-8+"px";s.style.top=e.clientY-8+"px";s.style.color=cols[n%4];
+    s.style.setProperty("--dx",(Math.random()*30-15)+"px");
+    document.body.appendChild(s);s.addEventListener("animationend",function(){s.remove()});
+  });
+})();
+</script>
